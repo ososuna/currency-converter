@@ -9,11 +9,80 @@
   <title>Currency Converter</title>
 </head>
 <body>
-  <nav class="navbar navbar-primary bg-primary">
+  <!-- Navbar -->
+  <nav class="nav navbar navbar-primary bg-primary">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1" style="color:#fff">Currency Converter</span>
+      <h2>
+        <span class="navbar-brand" style="color: #fff">
+          Currency Converter
+        </span>
+      </h2>
     </div>
   </nav>
+  <!-- Currency converter section -->
+  <section class="mt-5">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8 col-lg-6 col-xl-6">
+          <form>
+            <!-- Value to convert input -->
+            <div class="form-outline mb-4">
+              <input type="number" id="valueToConvert" class="form-control form-control-lg"
+                placeholder="Enter a value to convert" required/>
+              <label class="form-label" for="valueToConvert">
+                Value to convert
+              </label>
+            </div>
+            <!-- Currency from select -->
+            <div class="form-outline mb-4">
+              <select class="form-select" aria-label="Default select example">
+                <option value="USD" selected>USD - US Dollar</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="EUR">EUR - Euro</option>
+              </select>
+              <label class="form-label" for="valueToConvert">
+                Value to convert
+              </label>
+            </div>
+            <!-- Currency to select -->
+            <div class="form-outline mb-4">
+              <select class="form-select" aria-label="Default select example">
+                <option value="MXN" selected>MXN - Mexican Peso</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="EUR">EUR - Euro</option>
+              </select>
+              <label class="form-label" for="valueToConvert">
+                Value to convert
+              </label>
+            </div>
+            <!-- Buttons -->
+            <div class="row d-flex justify-content-center">
+              <!-- Calculate button -->
+              <div class="col-lg-6 col-xl-4">
+                <div class="text-center text-lg-center mt-2 pt-2">
+                  <button type="submit" class="btn btn-primary"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+              <!-- Clear button -->
+              <div class="col-lg-6 col-xl-4">
+                <div class="text-center text-lg-center mt-2 pt-2">
+                  <button class="btn btn-primary"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                    Clear
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- End buttons -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End currency converter section -->
 </body>
 <script src="./main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
