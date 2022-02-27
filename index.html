@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Currency Converter</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
   <!-- Navbar -->
   <nav class="nav navbar navbar-primary bg-primary">
     <div class="container-fluid">
@@ -76,16 +76,15 @@
     <!-- Answer container -->
     <div class="container">
       <div class="row d-flex justify-content-center mt-5">
-        <div class="col-md-8 col-lg-6 col-xl-6 border p-3">
+        <div id="resume" class="col-md-8 col-lg-6 col-xl-6 p-3">
           <div>
-            <p><strong>120.0</strong> USD = <strong>2465.50</strong> MXN</p>
+            <p id="resultP"></p>
           </div>
-          <div>
-            <p>1 USD = 20.546 MXN</p>
-            <p>1 MXN = 0.48671 USD</p>
-            <p>Change from USD to MXN: 1,954.583%</p>
-          </div><hr>
-          <div>
+          <div id="fromTo">
+            <p id="fromP"></p>
+            <p id="toP"></p>
+          </div>
+          <div><hr>
             <p>Rates updated Thu, 24 Feb 2022 11:13 AM EST</p>
           </div>
         </div>
@@ -93,7 +92,7 @@
     </div> <!-- END Answer container -->
   </section> <!-- END Currency converter section -->
   <!-- Footer -->
-  <footer class="bg-primary text-center text-white">
+  <footer class="bg-primary text-center text-white mt-auto">
     <div class="container p-4">
       <!-- Section social media -->
       <section class="mb-4">

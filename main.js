@@ -35,9 +35,19 @@ const convert = ( event ) => {
   const from  = currency.find( c => c.id === fromCurrency.value );
   const to    = currency.find( c => c.id === toCurrency.value );
 
-  result = valueToConvert.value * to.value / from.value;
+  result = (valueToConvert.value * to.value / from.value).toFixed(2);
 
-  console.log( result.toFixed(2) );
+  console.log( result );
+
+  resultP = document.getElementById('resultP');
+  fromP   = document.getElementById('fromP');
+  toP     = document.getElementById('toP');
+  
+  resultP.innerHTML = `<strong>${ valueToConvert.value }</strong> ${ from.id } = <strong>${ result }</strong> ${ to.id }`;
+  fromP.innerHTML = `1 ${ from.id } = ${ (1 * to.value / from.value).toFixed(2) } ${ to.id }`;
+  toP.innerHTML = `1 ${ to.id } = ${ (1 / to.value * from.value).toFixed(2) } ${ from.id }`;
+
+  document.getElementById('resume').classList.add('border');
 
 }
 
