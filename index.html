@@ -6,25 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <title>Currency Converter</title>
+  <title>Ditto's Currency Converter</title>
 </head>
 <body class="d-flex flex-column min-vh-100">
   <!-- Navbar -->
-  <nav class="nav navbar navbar-primary bg-primary">
+  <nav class="nav navbar navbar-primary ditto">
     <div class="container-fluid">
       <h2>
         <span class="navbar-brand text-white">
-          Currency Converter
+          Ditto's Currency Converter
         </span>
       </h2>
     </div>
   </nav> <!-- END Navbar -->
   <!-- Currency converter section -->
-  <section class="mt-5 mb-5">
+  <section class="mt-2 mb-5">
     <!-- Form container -->
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="col-md-8 col-lg-6 col-xl-6">
+          <div class="logo mb-2">
+            <img
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png" alt="ditto"
+            >
+          </div>
           <form>
             <!-- Value to convert input -->
             <div class="form-outline mb-4">
@@ -53,7 +58,7 @@
               <!-- Calculate button -->
               <div class="col-lg-6 col-xl-4">
                 <div class="text-center text-lg-center mt-2 pt-2">
-                  <button onclick="convert(event)" class="btn btn-primary"
+                  <button onclick="convert(event)" class="ditto btn btn-primary"
                     style="padding-left: 2.5rem; padding-right: 2.5rem;">
                     Calculate
                   </button>
@@ -92,7 +97,7 @@
     </div> <!-- END Answer container -->
   </section> <!-- END Currency converter section -->
   <!-- Footer -->
-  <footer class="bg-primary text-center text-white mt-auto">
+  <footer class="ditto text-center text-white mt-auto">
     <div class="container p-4">
       <!-- Section social media -->
       <section class="mb-4">

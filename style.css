@@ -12,3 +12,13 @@
     height: 100%;
   }
 }
+.logo img {
+  width: 45%;
+}
+.ditto {
+  background-color: rgb(156, 92, 180);
+}
+.btn-primary {
+  background-color: rgb(156, 92, 180) !important;
+  border: none !important;
+}
