@@ -29,6 +29,8 @@ const valueToConvert  = document.getElementById('valueToConvert');
 let values = [];
 
 const convert = ( event ) => {
+
+  if (!valueToConvert.value) return false;
   
   event.preventDefault();
   
