@@ -36,23 +36,15 @@
             </div> <!-- END Value to convert input -->
             <!-- Currency from select -->
             <div class="form-outline mb-4">
-              <select id="from" class="form-select" aria-label="Default select example">
-                <option value="USD" selected>USD - US Dollar</option>
-                <option value="JPY">JPY - Japanese Yen</option>
-                <option value="EUR">EUR - Euro</option>
-              </select>
-              <label class="form-label" for="from">
+              <select onchange="updateFromCurrencyOpts()" id="fromCurrency" class="form-select" aria-label="Default select example"></select>
+              <label class="form-label" for="fromCurrency">
                 From
               </label>
             </div> <!-- END Currency from select -->
             <!-- Currency to select -->
             <div class="form-outline mb-4">
-              <select id="to" class="form-select" aria-label="Default select example">
-                <option value="MXN" selected>MXN - Mexican Peso</option>
-                <option value="JPY">JPY - Japanese Yen</option>
-                <option value="EUR">EUR - Euro</option>
-              </select>
-              <label class="form-label" for="to">
+              <select onchange="updateToCurrencyOpts()" id="toCurrency" class="form-select" aria-label="Default select example"></select>
+              <label class="form-label" for="toCurrency">
                 To
               </label>
             </div> <!-- END currency to select -->
@@ -61,7 +53,7 @@
               <!-- Calculate button -->
               <div class="col-lg-6 col-xl-4">
                 <div class="text-center text-lg-center mt-2 pt-2">
-                  <button type="submit" class="btn btn-primary"
+                  <button onclick="convert(event)" class="btn btn-primary"
                     style="padding-left: 2.5rem; padding-right: 2.5rem;">
                     Calculate
                   </button>
