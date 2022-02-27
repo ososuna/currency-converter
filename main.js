@@ -29,13 +29,15 @@ const valueToConvert  = document.getElementById('valueToConvert');
 let values = [];
 
 const convert = ( event ) => {
+  
   event.preventDefault();
   
-  const fromValue = fromCurrency.value;
-  const toValue = toCurrency.value;
+  const from  = currency.find( c => c.id === fromCurrency.value );
+  const to    = currency.find( c => c.id === toCurrency.value );
 
-  console.log('From', fromValue);
-  console.log('To', toValue);
+  result = valueToConvert.value * to.value / from.value;
+
+  console.log( result.toFixed(2) );
 
 }
 
@@ -71,7 +73,6 @@ currency.forEach( c => {
   toCurrency.appendChild(opt);
 });
 
+toCurrency.value = currency[1].id;
 
 values = [ fromCurrency.value, toCurrency.value ];
-
-console.log( values );
