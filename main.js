@@ -22,11 +22,26 @@ const currency = [
   }
 ]
 
+let values = [];
+
 const fromCurrency    = document.getElementById('fromCurrency'); 
+const fromP           = document.getElementById('fromP');
+const resultP         = document.getElementById('resultP');
+const resume          = document.getElementById('resume');
 const toCurrency      = document.getElementById('toCurrency'); 
+const toP             = document.getElementById('toP');
 const valueToConvert  = document.getElementById('valueToConvert');
 
-let values = [];
+const clearValues = () => {
+  
+  valueToConvert.value = '';
+  resultP.innerHTML = '';
+  fromP.innerHTML = '';
+  toP.innerHTML = '';
+
+  resume.classList.remove('border');
+
+}
 
 const convert = ( event ) => {
 
@@ -38,18 +53,12 @@ const convert = ( event ) => {
   const to    = currency.find( c => c.id === toCurrency.value );
 
   result = (valueToConvert.value * to.value / from.value).toFixed(2);
-
-  console.log( result );
-
-  resultP = document.getElementById('resultP');
-  fromP   = document.getElementById('fromP');
-  toP     = document.getElementById('toP');
   
   resultP.innerHTML = `<strong>${ valueToConvert.value }</strong> ${ from.id } = <strong>${ result }</strong> ${ to.id }`;
   fromP.innerHTML = `1 ${ from.id } = ${ (1 * to.value / from.value).toFixed(2) } ${ to.id }`;
   toP.innerHTML = `1 ${ to.id } = ${ (1 / to.value * from.value).toFixed(2) } ${ from.id }`;
 
-  document.getElementById('resume').classList.add('border');
+  resume.classList.add('border');
 
 }
 
