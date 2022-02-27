@@ -53,6 +53,28 @@ const convert = ( event ) => {
 
 }
 
+const initData = () => {
+
+  currency.forEach( c => {
+    const opt = document.createElement('option');
+    opt.textContent = c.name;
+    opt.value = c.id;
+    fromCurrency.appendChild(opt);
+  });
+  
+  currency.forEach( c => {
+    const opt = document.createElement('option');
+    opt.textContent = c.name;
+    opt.value = c.id;
+    toCurrency.appendChild(opt);
+  });
+  
+  toCurrency.value = currency[1].id;
+  
+  values = [ fromCurrency.value, toCurrency.value ];
+
+}
+
 const updateFromCurrencyOpts = () => {
   
   if ( fromCurrency.value === values[1] ) {
@@ -71,20 +93,4 @@ const updateToCurrencyOpts = () => {
     values[1] = toCurrency.value;
 }
 
-currency.forEach( c => {
-  const opt = document.createElement('option');
-  opt.textContent = c.name;
-  opt.value = c.id;
-  fromCurrency.appendChild(opt);
-});
-
-currency.forEach( c => {
-  const opt = document.createElement('option');
-  opt.textContent = c.name;
-  opt.value = c.id;
-  toCurrency.appendChild(opt);
-});
-
-toCurrency.value = currency[1].id;
-
-values = [ fromCurrency.value, toCurrency.value ];
+initData();
